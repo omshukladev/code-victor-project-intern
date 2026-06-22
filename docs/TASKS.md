@@ -323,9 +323,9 @@ git commit -m "feat: standardize api responses"
 
 ## Task 9.1 Validation Tests
 
-* [ ] Invalid limit
-* [ ] Invalid cursor
-* [ ] Invalid query
+* [x] Invalid limit
+* [x] Invalid cursor
+* [x] Invalid query
 
 Deliverable:
 
@@ -335,9 +335,9 @@ Deliverable:
 
 ## Task 9.2 Pagination Tests
 
-* [ ] First page
-* [ ] Second page
-* [ ] Last page
+* [x] First page
+* [x] Second page
+* [x] Last page
 
 Deliverable:
 
@@ -355,8 +355,8 @@ Scenario
 
 Expected
 
-* [ ] No duplicates
-* [ ] No missing records
+* [x] No duplicates
+* [x] No missing records
 
 Deliverable:
 
@@ -380,9 +380,9 @@ EXPLAIN ANALYZE
 
 Verify
 
-* [ ] Index scan used
-* [ ] No sequential scan
-* [ ] Query fast
+* [x] Index scan used
+* [x] No sequential scan
+* [x] Query fast
 
 Deliverable:
 
@@ -429,10 +429,10 @@ git commit -m "chore: deploy application"
 
 Include
 
-* [ ] Project overview
-* [ ] Setup instructions
-* [ ] Environment variables
-* [ ] API documentation
+* [x] Project overview
+* [x] Setup instructions
+* [x] Environment variables
+* [x] API documentation
 * [ ] Deployment URL
 
 Deliverable:

@@ -18,7 +18,13 @@
 - Built products catalog endpoint controller handler (`backend/src/controllers/products.controller.ts`) executing parameterized raw SQL queries with Keyset pagination rules `(created_at < $1 OR (created_at = $1 AND id < $2))`.
 - Integrated lookahead slicing (+1 limit database checks) into the query logic to identify the existence of subsequent pages without secondary COUNT scans.
 - Hooked up and registered products route `/products` under Fastify prefix `/api` in `backend/src/app.ts`.
-- Updated `docs/TASKS.md` to check off Phase 1 through Phase 8 as completed.
+- Created comprehensive integration and unit test suite (`backend/src/__tests__/products.test.ts`) covering Zod parameter validation limits, malformed cursors, category filters, and cursor-based sequential pagination.
+- Implemented consistency tests under concurrent insertions, verifying that items inserted mid-browse are not skipped or duplicated.
+- Executed test suites via Vitest (`npm run test`) and identified that compiled files in `dist/` were being run in parallel with the source `src/` files, causing concurrent database row mutations and race condition failures.
+- Created Vitest configuration (`backend/vitest.config.ts`) to exclude the compiled `dist/` directory, resolving test file duplication and ensuring a clean, race-free single-run test execution (8 tests passed).
+- Audited pagination queries via `EXPLAIN ANALYZE` and verified that they use the B-Tree composite index `idx_products_pagination` successfully with an execution plan time of **0.059 ms**.
+- Created a comprehensive root `README.md` detailing the project architecture, tech stack, codebase structure, execution parameters, local setup instructions, test commands, and database benchmarks.
+- Updated `docs/TASKS.md` to check off Phase 1 through Phase 9, as well as Phase 11's README task as completed.
 
 ### Decisions
 - Standardized the database communication pattern around the raw `pg` connection pool, completely avoiding Prisma or any other ORM to maximize execution speed and maintain transparent SQL control.
@@ -29,14 +35,10 @@
 - Used a lookahead query limit (`limit + 1`) to verify next-page availability dynamically rather than executing a slow count query.
 
 ### Problems Encountered
-- None. All endpoint schemas, base64 utility functions, routing contexts, and controller queries compile and execute cleanly.
+- Observed a test failure race condition during Vitest runs. Because both the source `.ts` files and the compiled `.js` files (in `dist/`) were running in parallel, their database operations collided. Resolved this by adding `vitest.config.ts` to exclude `**/dist/**` from the test runner.
 
 ### Next Steps
-- **Phase 9: Testing**
-  - Write comprehensive Vitest test suites (validation checks, pagination sequences, concurrent insert consistency, and query execution metrics).
-  - Run execution plan logs (`EXPLAIN ANALYZE`) to verify composite indexes are utilized for product requests.
 - **Phase 10: Deployment**
   - Setup and deploy the Fastify backend publicly on Render.
 - **Phase 11: Documentation**
-  - Compile the final README.md detailing project structures, database indexing design, and setup steps.
   - Complete the submission note detailing architecture choices, AI audit logs, and development learnings.
