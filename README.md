@@ -56,3 +56,13 @@ I used GenAI as an architectural pair-programmer to explore optimal strategies f
 
   • Single Run (runs once and exits):
     npm run test -- --run
+
+
+# Backend routes 
+
+
+> deployed on render free tier so it sleep after 15 minutes of inactivity. First request take time to wake up the server.
+
+- MAIN : https://code-victor-project-intern.onrender.com/
+- health check : https://code-victor-project-intern.onrender.com/api/health
+- products : https://code-victor-project-intern.onrender.com/api/products

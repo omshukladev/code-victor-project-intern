@@ -467,15 +467,15 @@ Deliverable:
 
 ## Functional Checklist
 
-* [ ] Database connected
-* [ ] Products table exists
-* [ ] 200,000 records inserted
-* [ ] Indexes created
-* [ ] Validation implemented
-* [ ] Cursor pagination implemented
-* [ ] Category filtering implemented
-* [ ] API working
-* [ ] Tests passing
+* [x] Database connected
+* [x] Products table exists
+* [x] 200,000 records inserted
+* [x] Indexes created
+* [x] Validation implemented
+* [x] Cursor pagination implemented
+* [x] Category filtering implemented
+* [x] API working
+* [x] Tests passing
 * [ ] Hosted publicly
 
 ---
