@@ -10,11 +10,11 @@ Project Status: IN PROGRESS
 
 ## Task 1.1 Initialize Project
 
-* [ ] Create GitHub repository
-* [ ] Clone repository locally
-* [ ] Initialize Node.js project
-* [ ] Initialize TypeScript
-* [ ] Configure tsconfig.json
+* [x] Create GitHub repository
+* [x] Clone repository locally
+* [x] Initialize Node.js project
+* [x] Initialize TypeScript
+* [x] Configure tsconfig.json
 
 Deliverable:
 
@@ -32,17 +32,17 @@ git commit -m "chore: initialize project"
 
 ### Production Dependencies
 
-* [ ] fastify
-* [ ] pg
-* [ ] zod
-* [ ] dotenv
+* [x] fastify
+* [x] pg
+* [x] zod
+* [x] dotenv
 
 ### Development Dependencies
 
-* [ ] typescript
-* [ ] tsx
-* [ ] vitest
-* [ ] @types/node
+* [x] typescript
+* [x] tsx
+* [x] vitest
+* [x] @types/node
 
 Deliverable:
 
