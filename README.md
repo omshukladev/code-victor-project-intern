@@ -66,3 +66,7 @@ I used GenAI as an architectural pair-programmer to explore optimal strategies f
 - MAIN : https://code-victor-project-intern.onrender.com/
 - health check : https://code-victor-project-intern.onrender.com/api/health
 - products : https://code-victor-project-intern.onrender.com/api/products
+
+# Frontend routes
+
+- MAIN : https://code-victor-project-intern.vercel.app/
